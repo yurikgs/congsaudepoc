@@ -3,7 +3,6 @@ import './Login.css';
 import logo from '../../assets/img/logo.png'
 import { LoginProps } from '../../common/props/login-props';
 import withAuthorization from '../../layouts/Authentication/withAuthorization';
-import { User } from '../../common/types/user';
 
 
 function Login({ onLogin }: LoginProps) {

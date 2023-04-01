@@ -25,7 +25,7 @@ function withAuthorization <T extends AuthProps> (WrappedComponent: ComponentTyp
       } else {
         navigate('/login')
       }
-    }, []);
+    }, [navigate]);
 
     function handleLogin(user: User) {
       const formUsername = user.username;
