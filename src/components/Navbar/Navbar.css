@@ -1,0 +1,20 @@
+#Navbar {
+    width: 100%;
+}
+nav {
+    width: 90%;
+    height: 3em;
+    display: flex;
+    justify-content: end;
+}
+button {
+    background-color: #ff1e00;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 6px;
+    margin-top: 10px;
+    font-family: 'Alkatra', cursive;
+    height: 2.1em;
+    cursor: pointer;
+  }

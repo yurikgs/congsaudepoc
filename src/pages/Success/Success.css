@@ -1,0 +1,13 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(5px + 2vmin);
+    min-height: 100vh;
+    text-align: center;
+}
+
+section h1 {
+    color: green;
+    font-size: 3em;
+}

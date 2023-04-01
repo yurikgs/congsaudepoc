@@ -1,0 +1,68 @@
+.territorios-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .territorio-card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  .ultimo-trabalhador,
+  .data-ultimo-trabalho {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.modal {
+align-items: center;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+height: 100%;
+justify-content: center;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+
+.modal-content {
+background-color: #ffffff;
+border: 1px solid #cccccc;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+padding: 20px;
+text-align: center;
+width: 300px;
+}
+
+.modal-content h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.modal-content button {
+background-color: #4caf50;
+border: none;
+border-radius: 4px;
+color: #ffffff;
+cursor: pointer;
+font-size: 16px;
+margin-top: 20px;
+padding: 10px;
+width: 100%;
+}
+
+.modal-content button:hover {
+background-color: #3e8e41;
+}
+  
