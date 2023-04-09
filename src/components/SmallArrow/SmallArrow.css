@@ -1,0 +1,23 @@
+.arrow {
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.top {
+    width: 15px!important;
+    rotate: 270deg!important;
+}
+.right {
+    width: 15px!important;
+}
+.left {
+    width: 15px!important;
+    rotate: 180deg!important;
+}
+.bottom {
+    width: 15px!important;
+    rotate: 90deg!important;
+}

@@ -1,0 +1,55 @@
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-family: 'Alkatra', cursive;
+    height: 2.1em;
+    cursor: pointer;
+}
+
+
+/* By types */
+button.edit {
+    background-color: var(--transparent);
+    margin: 0 auto;
+    display: s;
+    align-items: center;
+    justify-content: center;
+}
+
+button.edit img {
+    width: 50px;
+    margin: 0 auto;
+}
+
+
+
+/* Color settings */
+
+button.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+button.secondary-dark {
+    background-color: var(--secondary-dark);
+    color: white;
+}
+
+button.success-dark {
+    background-color: var(--success-dark);
+    color: white;
+}
+
+button.warning {
+    background-color: var(--warning);
+    color: black;
+    font-weight: 600;
+}
+
+button.warning:focus,
+button.warning:active {
+    background-color: var(--warning-darker);
+    color: white;
+    font-weight: 500;
+}

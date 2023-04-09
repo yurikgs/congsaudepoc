@@ -1,0 +1,19 @@
+#navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+nav {
+    width: 90%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between!important;
+}
+
+nav h1 {
+    margin: 0;
+}

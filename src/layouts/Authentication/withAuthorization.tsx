@@ -1,13 +1,9 @@
 import { useState, useEffect, ComponentType } from 'react';
 import { User } from '../../common/types/user';
 import { useNavigate } from 'react-router-dom';
+import { AuthProps } from '../../common/props/auth-props';
 
-interface AuthProps {
-  username: string;
-  loggedIn: boolean;
-  onLogin: (user: User) => void;
-  onLogout: () => void;
-}
+
 
 function withAuthorization <T extends AuthProps> (WrappedComponent: ComponentType<T>) {
 
@@ -36,7 +32,7 @@ function withAuthorization <T extends AuthProps> (WrappedComponent: ComponentTyp
         localStorage.setItem('password', formPassword);
         setUsername(username);
         setLoggedIn(true);
-        navigate('/territorios/list');
+        navigate('/territorios/list2');
       }
     }
 

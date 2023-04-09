@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Login.css';
-import logo from '../../assets/img/logo.png'
 import { LoginProps } from '../../common/props/login-props';
 import withAuthorization from '../../layouts/Authentication/withAuthorization';
 
@@ -26,7 +25,7 @@ function Login({ onLogin }: LoginProps) {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <div id="brand-container">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src='../../assets/img/logo.png' className="App-logo" alt="logo" />
             <h1>Território Saúde</h1>
         </div> 
         

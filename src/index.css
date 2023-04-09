@@ -1,13 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import './styles/reset.css';
+@import './styles/root.css';
+@import './styles/fonts.css';
 
-body {
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+*, body, h1 {
   margin: 0;
-  font-family: 'Alkatra', cursive;
+  font-family: 'Alkatra', cursive; font-weight: 200;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: #0022ff;
+  color: #ffffff;
 }

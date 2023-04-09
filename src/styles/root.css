@@ -1,0 +1,56 @@
+:root {
+    /* Cores primárias */
+    --primary: rgba(0, 123, 255, 1);
+    --primary-light: rgba(166, 212, 250, 1);
+    --primary-dark: rgba(1, 58, 122, 1);
+    --primary-lighter: rgba(196, 232, 250, 1);
+    --primary-darker: rgba(0, 51, 107, 1);
+    
+    /* Cores secundárias */
+    --secondary: rgba(108, 117, 125, 1);
+    --secondary-light: rgba(163, 173, 180, 1);
+    --secondary-dark: rgba(74, 80, 87, 1);
+    --secondary-lighter: rgba(208, 215, 220, 1);
+    --secondary-darker: rgba(45, 49, 54, 1);
+    
+    /* Cores de sucesso */
+    --success: rgba(40, 167, 69, 1);
+    --success-light: rgba(186, 233, 176, 1);
+    --success-dark: rgba(12, 97, 40, 1);
+    --success-lighter: rgba(204, 245, 196, 1);
+    --success-darker: rgba(24, 124, 51, 1);
+    
+    /* Cores de perigo */
+    --danger: rgba(220, 53, 69, 1);
+    --danger-light: rgba(247, 185, 196, 1);
+    --danger-dark: rgba(132, 30, 51, 1);
+    --danger-lighter: rgba(255, 214, 223, 1);
+    --danger-darker: rgba(104, 21, 36, 1);
+    
+    /* Cores de aviso */
+    --warning: rgba(255, 193, 7, 1);
+    --warning-light: rgba(255, 230, 153, 1);
+    --warning-dark: rgba(153, 117, 0, 1);
+    --warning-lighter: rgba(255, 245, 204, 1);
+    --warning-darker: rgba(168, 130, 0, 1);
+    
+    /* Cores de informação */
+    --info: rgba(23, 162, 184, 1);
+    --info-light: rgba(178, 235, 242, 1);
+    --info-dark: rgba(0, 109, 119, 1);
+    --info-lighter: rgba(211, 248, 255, 1);
+    --info-darker: rgba(0, 79, 88, 1);
+    
+    /* Cores claras */
+    --light: rgba(248, 249, 250, 1);
+    --lighter: rgba(255, 255, 255, 1);
+    
+    /* Cores escuras */
+    --dark: rgba(52, 58, 64, 1);
+    --darker: rgba(0, 0, 0, 1);
+    
+    /* Cores transparentes */
+    --transparent: rgba(0, 0, 0, 0);
+    --white: rgba(255, 255, 255, 1);
+  }
+  

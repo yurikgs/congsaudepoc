@@ -7,6 +7,11 @@ import { createBrowserRouter,
 import Login from './pages/Login/Login';
 import Success from './pages/Success/Success';
 import TerritoriosList from './pages/TerritoriosList/TerritoriosList';
+import TerritoriosList2 from './pages/TerritoriosList2/TerritoriosList2';
+import Territorio from './pages/Territorio/Territorio';
+import Atividades from './pages/Atividades/Atividades';
+import AtividadeDetalhes from './pages/AtividadeDetalhes/AtividadeDetalhes';
+import AtividadeNova from './pages/AtividadeNova/AtividadeNova';
 
 
 const router = createBrowserRouter([
@@ -25,6 +30,26 @@ const router = createBrowserRouter([
   {
     path: "/territorios/list",
     element: <TerritoriosList />,
+  },
+  {
+    path: "/territorios/list2",
+    element: <TerritoriosList2 />,
+  },
+  {
+    path: "/territorio/:id",
+    element: <Territorio/>,
+  },
+  {
+    path: "/atividades/territorio/:id",
+    element: <Atividades/>
+  },
+  {
+    path: "/atividades/nova",
+    element: <AtividadeNova/>
+  },
+  {
+    path: "/detalhes/atividade/:id",
+    element: <AtividadeDetalhes/>
   }
 ])
 
