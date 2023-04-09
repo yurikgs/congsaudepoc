@@ -1,4 +1,3 @@
-import AppLayout from '../../layouts/AppLayout/AppLayout';
 import withAuthorization from '../../layouts/Authentication/withAuthorization';
 import FocusLayout from '../../layouts/FocusLayout/FocusLayout';
 import './Success.css'

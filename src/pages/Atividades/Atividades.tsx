@@ -1,7 +1,6 @@
 import './Atividades.css'
 import { useParams } from 'react-router-dom'
 import { territorios } from '../../common/consts/territorios'
-import AppLayout from '../../layouts/AppLayout/AppLayout'
 import { AtividadeType } from '../../common/types/atividade-type'
 import { atividades } from '../../common/consts/atividades'
 import FocusLayout from '../../layouts/FocusLayout/FocusLayout'
@@ -11,12 +10,12 @@ function Atividades () {
     const {id} = useParams()
     const idNumber = Number(id)
     // Configurar Validção numperica se não Notfound Page
-    const territorio = territorios.find( territ => territ?.id == idNumber) ?? null
+    const territorio = territorios.find( territ => territ?.id === idNumber) ?? null
 
     let atividadesList: AtividadeType[] = [];
 
     territorio?.atividades?.forEach( id => {
-        const atividade: AtividadeType = atividades.find(ativid => ativid?.id==id) ?? null
+        const atividade: AtividadeType = atividades.find(ativid => ativid?.id===id) ?? null
         
         atividadesList.push(atividade)
     })

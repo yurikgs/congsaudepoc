@@ -11,7 +11,7 @@ const {id} = useParams()
 const idNumber = Number(id)
 // Configurar Validção numperica se não Notfound Page
 
-const territorio: TerritorioType = territorios.find(territ => territ?.id == idNumber) ?? null
+const territorio: TerritorioType = territorios.find(territ => territ?.id === idNumber) ?? null
 
 
 return (

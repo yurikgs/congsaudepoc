@@ -3,7 +3,6 @@ import FocusLayout from "../../layouts/FocusLayout/FocusLayout"
 import { atividades } from "../../common/consts/atividades"
 import './AtividadeDetalhes.css'
 import Button from "../../components/Button/Button"
-import { Link } from "react-router-dom"
 
 function AtividadeDetalhes () {
     const {id} = useParams()
