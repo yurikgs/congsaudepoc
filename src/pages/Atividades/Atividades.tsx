@@ -1,27 +1,36 @@
 import './Atividades.css'
-import { useParams } from 'react-router-dom'
-import { territorios } from '../../common/consts/territorios'
+import { useParams, Link } from 'react-router-dom'
 import { AtividadeType } from '../../common/types/atividade-type'
-import { atividades } from '../../common/consts/atividades'
 import FocusLayout from '../../layouts/FocusLayout/FocusLayout'
-import { Link } from 'react-router-dom'
 import Button from '../../components/Button/Button'
+import { useEffect, useState } from 'react'
+import { TerritorioType } from '../../common/types/territorio-type'
+import { showTerritorio } from '../../db/firestore/Repository/territorioRepository'
+import { showAtividadeByTerritorio } from '../../db/firestore/Repository/atividadeRepository'
+import ClickToEdit from '../../components/ClickToEdit/ClickToEdit'
+
 function Atividades () {
-    const {id} = useParams()
-    const idNumber = Number(id)
-    // Configurar Validção numperica se não Notfound Page
-    const territorio = territorios.find( territ => territ?.id === idNumber) ?? null
-
-    let atividadesList: AtividadeType[] = [];
-
-    territorio?.atividades?.forEach( id => {
-        const atividade: AtividadeType = atividades.find(ativid => ativid?.id===id) ?? null
-        
-        atividadesList.push(atividade)
-    })
 
 
+    const idParam = useParams().id
+    const id = String(idParam)
+    // Configurar Validção -- se não Notfound Page
 
+    const  [territorio, setTerritorio] = useState<TerritorioType>(null)
+    const [atividadesList, setAtividadesList] = useState<AtividadeType[]>([])
+
+
+    useEffect(()=> {
+        const fetchData = async () => {
+            const territorioDoc = await showTerritorio(id)
+            setTerritorio(territorioDoc)
+
+            const atividadesList = await showAtividadeByTerritorio(id) as AtividadeType[]
+
+            setAtividadesList(atividadesList.reverse())
+        }
+        fetchData()
+    }, [id])
 
     return (
 <FocusLayout title={territorio?.name as string}>
@@ -37,19 +46,25 @@ function Atividades () {
             {atividadesList.map(atividade => (
                 
                 <div className='atividade-card' key={atividade?.id}>
-                  <Link to={`/detalhes/atividade/${atividade?.id}`}>
-                    <p>Inicio: {atividade?.inicio}</p>
+                  <div className="card-info">
                     <p>
-                    <p>Fim:           {atividade?.fim}        
+                        Inicio: {atividade?.inicio}</p>
+                    <p>
+                        Fim:           {atividade?.fim}        
                     </p>
+                    <p>
                         Obss.: {atividade?.obss}
                     </p>
-                  </Link>
+                  </div>
+                  <div className='click-to-edit'>
+                    <ClickToEdit link={`/detalhes/atividade/${atividade?.id}`}/>
+                  </div>
+
                 </div>
             ))}
         </div>
 
-        <Link to={'/atividades/nova'}>
+        <Link to={`/atividades/territorio/${territorio?.id}/nova`}>
             <Button classes='primary' text='Nova Atividade'/>
         </Link>
 

@@ -10,15 +10,16 @@ button {
 
 /* By types */
 button.edit {
+    height: fit-content;
     background-color: var(--transparent);
+    width: 50px;
     margin: 0 auto;
-    display: s;
-    align-items: center;
-    justify-content: center;
+    padding: 0!important;
+    overflow: none;
 }
 
 button.edit img {
-    width: 50px;
+    width: 40px;
     margin: 0 auto;
 }
 
@@ -52,4 +53,9 @@ button.warning:active {
     background-color: var(--warning-darker);
     color: white;
     font-weight: 500;
+}
+
+button.danger-dark {
+    background-color: var(--danger-dark);
+    color: white;
 }

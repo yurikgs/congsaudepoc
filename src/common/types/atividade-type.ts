@@ -1,6 +1,9 @@
+import { DocumentData, DocumentReference } from "firebase/firestore";
+
 export type AtividadeType = {
-    id: number;
+    id: string;
     inicio: string;
-    fim: string;
+    fim?: string;
     obss: string;
+    territorio: DocumentReference<DocumentData> | string;
 } | null

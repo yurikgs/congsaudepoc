@@ -3,15 +3,30 @@ import { useParams } from 'react-router-dom'
 import { territorios } from '../../common/consts/territorios'
 import { TerritorioType } from '../../common/types/territorio-type'
 import FocusLayout from '../../layouts/FocusLayout/FocusLayout'
-import Button from '../../components/Button/Button'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { showTerritorio } from '../../db/firestore/Repository/territorioRepository'
+import ClickToEdit from '../../components/ClickToEdit/ClickToEdit'
 
 function Territorio () {
 const {id} = useParams()
-const idNumber = Number(id)
 // Configurar Validção numperica se não Notfound Page
 
-const territorio: TerritorioType = territorios.find(territ => territ?.id === idNumber) ?? null
+
+// VER COM O VALMIR
+const territorioInit: TerritorioType = territorios.find(territ => territ?.id === id) ?? null
+
+const [territorio, setTerritorio] = useState(territorioInit)
+
+useEffect( () => {
+
+    const fetchData = async () => {
+            const data = await showTerritorio(id??"")
+            setTerritorio(data)
+        }
+    fetchData()
+    } 
+    
+    , [territorio, id])
 
 
 return (
@@ -35,15 +50,14 @@ return (
                 <p>{territorio?.detalhes}</p>
         </div>
         <div className="observacoes-atividade">
-                <h3>Observações da Atividade</h3>
+                <h3>Última Atividade</h3>
                 <hr />
                 <div className='obss-wrapper'>
                     <p>
                     {territorio?.obss}
                     </p>
-                    <Link to={`/detalhes/atividade/${territorio?.idDaUltimaAtividade}`}>
-                        <Button classes='edit' childrenType='edit'/>
-                    </Link>
+                    <ClickToEdit   
+                    link={`/detalhes/atividade/${territorio?.idDaUltimaAtividade}`}/>
                 </div>
 
         </div>

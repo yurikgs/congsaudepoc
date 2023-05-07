@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/db/firestore/firebase.jsstorsrc/db/firestore/firebase.jsjs", "src/db/firestore/firebase.js"  ]
 }

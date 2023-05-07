@@ -1,12 +1,12 @@
 export type TerritorioType = {
-    id: number;
+    id: string;
     photo_link: string;
     name: string;
     status: string;  // Criar uma enum
     ultimoTrabalhador: string;
     dataUltimaAtividade: string;
-    idDaUltimaAtividade: number;
+    idDaUltimaAtividade: string;
     detalhes: string;
     obss:string; 
-    atividades?: number[]
+    atividades?: string[]
   } | null;

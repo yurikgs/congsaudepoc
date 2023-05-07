@@ -29,8 +29,3 @@ form.atividade-detalhes-form .input-warning-danger {
 form.atividade-detalhes-form strong {
     font-weight: bold;
 }
-
-.buttons-container {
-    display: flex;
-    justify-content: space-between;
-}

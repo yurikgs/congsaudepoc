@@ -23,7 +23,7 @@
     /* Cores de perigo */
     --danger: rgba(220, 53, 69, 1);
     --danger-light: rgba(247, 185, 196, 1);
-    --danger-dark: rgba(132, 30, 51, 1);
+    --danger-dark: rgb(200, 23, 59);
     --danger-lighter: rgba(255, 214, 223, 1);
     --danger-darker: rgba(104, 21, 36, 1);
     

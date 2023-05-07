@@ -27,12 +27,12 @@ function withAuthorization <T extends AuthProps> (WrappedComponent: ComponentTyp
       const formUsername = user.username;
       const formPassword = user.password;
       // TODO: implement firebase auth logic here
-      if (formUsername === 'Yuri' && formPassword === '1234') {
+      if (formUsername === 'Yuri' && formPassword === 'Yuri1234') {
         localStorage.setItem('username', formUsername);
         localStorage.setItem('password', formPassword);
         setUsername(username);
         setLoggedIn(true);
-        navigate('/territorios/list2');
+        navigate('/territorios/list');
       }
     }
 

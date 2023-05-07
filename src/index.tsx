@@ -6,12 +6,11 @@ import { createBrowserRouter,
          RouterProvider } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Success from './pages/Success/Success';
-import TerritoriosList from './pages/TerritoriosList/TerritoriosList';
-import TerritoriosList2 from './pages/TerritoriosList2/TerritoriosList2';
 import Territorio from './pages/Territorio/Territorio';
 import Atividades from './pages/Atividades/Atividades';
 import AtividadeDetalhes from './pages/AtividadeDetalhes/AtividadeDetalhes';
 import AtividadeNova from './pages/AtividadeNova/AtividadeNova';
+import TerritoriosList from './pages/TerritoriosList/TerritoriosList';
 
 
 const router = createBrowserRouter([
@@ -32,10 +31,6 @@ const router = createBrowserRouter([
     element: <TerritoriosList />,
   },
   {
-    path: "/territorios/list2",
-    element: <TerritoriosList2 />,
-  },
-  {
     path: "/territorio/:id",
     element: <Territorio/>,
   },
@@ -44,7 +39,7 @@ const router = createBrowserRouter([
     element: <Atividades/>
   },
   {
-    path: "/atividades/nova",
+    path: "/atividades/territorio/:id/nova",
     element: <AtividadeNova/>
   },
   {
@@ -52,6 +47,7 @@ const router = createBrowserRouter([
     element: <AtividadeDetalhes/>
   }
 ])
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -61,6 +57,7 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
