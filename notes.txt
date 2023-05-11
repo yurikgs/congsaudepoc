@@ -1,3 +1,4 @@
 A documentação para a execução das queries é na vdd a que está no domínio do google cloud:
 
+
 https://cloud.google.com/firestore/docs/query-data/queries?hl=pt-br
